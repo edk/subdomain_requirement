@@ -25,7 +25,7 @@ module SubdomainRequirement
     # :redirect_on_error => 'path' - sends to a path.  by default respond with a 404
     #  :only=>:subdomain  - the controller only works for the subdomain
     #  :except=>:subdomain - works for all subdomains except those listed
-    def require_subdomain(subdomain, options)
+    def require_subdomain(subdomain, options={})
       subdomain = [subdomain] unless Array === subdomain
       options.to_options!
 
